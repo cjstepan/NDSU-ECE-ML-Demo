@@ -1,18 +1,20 @@
-<div>
-  <h1>What is Transfer Learning?</h1>
-  <p>Transfer Learning is a subset of Machine Learning that uses a technique</p>
-</div>
-
-<div class="processes">
-  <!-- work on dynamic display using *ngFor -->
-  <app-process-card [process]="process1"></app-process-card>
-  <app-process-card [process]="process2"></app-process-card>
-  <app-process-card [process]="process3"></app-process-card>
-  <app-process-card [process]="process4"></app-process-card>
-  <app-process-card [process]="process5"></app-process-card>
-  <app-process-card [process]="process6"></app-process-card>
-  <app-process-card [process]="process7"></app-process-card>
-  <app-process-card [process]="process8"></app-process-card>
-  <app-process-card [process]="process9"></app-process-card>
-  <app-process-card [process]="process10"></app-process-card>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <p>
+      Click on any of the topics below to expand the accordion and learn more
+    </p>
+    <div>
+      <app-process-card [process]="process1"></app-process-card>
+      <app-process-card [process]="process2"></app-process-card>
+      <app-process-card [process]="process3"></app-process-card>
+      <app-process-card [process]="process4"></app-process-card>
+      <app-process-card [process]="process5"></app-process-card>
+      <app-process-card [process]="process6"></app-process-card>
+    </div>
+  </body>
+</html>

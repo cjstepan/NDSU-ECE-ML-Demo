@@ -1,24 +1,31 @@
 .process-card {
     margin-bottom: 40px;
-    text-align: center;
     border-radius: 10px;
     padding: 20px 0;
-    box-shadow: 5px 5px 10px #0a5640;
+    box-shadow: 5px 5px 10px #ffc82e;
+    max-width: 750px;
+    background-color: #005643;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.process-card .process-name {
-    font-size: 25px;
+.container-xxl {
+    display: flex;
+}
+
+#name {
+    font-size: 20px;
     font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #FFF;
+    text-align: center;
+    background-color: #005643;
 }
 
-.process-card .process-description {
-    max-width: 360px;
-    margin: 0 auto;
-    font-size: 14px;
-    user-select: none;
-}
 .process-card:hover {
     transform: translateX(-5px);
 }
 
-/* on click, redirect user to dedicated page for the process */
+.accordion-item{
+    border: 0;
+    width: 100%;
+}

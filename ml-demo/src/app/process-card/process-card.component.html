@@ -1,7 +1,54 @@
-<div class="process-card">
-  <div class="process-name">{{ process.name }}</div>
-
-  <div class="process-description">
-    {{ process.description }}
+<div class="accordion process-card accordion-flush container-xxl">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+        id="name"
+      >
+        {{ process.name }}
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        {{ process.description }}
+      </div>
+      <div [ngSwitch]="process.name">
+        <iframe
+          *ngSwitchCase="'SR Latch Demo'"
+          src="https://circuitverse.org/simulator/embed/sr-latch-demo?theme=night-sky&display_title=true&clock_time=false&fullscreen=false&zoom_in_out=false"
+          style="border-width: 2px; border-style: solid; border-color: 0000"
+          name="myiframe"
+          id="sr-latch-demo"
+          scrolling="no"
+          frameborder="1"
+          marginheight="0px"
+          marginwidth="0px"
+          height="500"
+          width="500"
+          allowFullScreen
+        ></iframe>
+        <iframe
+          *ngSwitchCase="'Logic Gates Demo'"
+          src="https://circuitverse.org/simulator/embed/logic-gates-demo-c8ea593c-7a74-4730-a932-e02e544ef58e?theme=night-sky&display_title=true&clock_time=false&fullscreen=false&zoom_in_out=false"
+          style="border-width: 2px; border-style: solid; border-color: 0000"
+          name="myiframe"
+          id="projectPreview"
+          scrolling="no"
+          frameborder="1"
+          marginheight="0px"
+          marginwidth="0px"
+          height="500"
+          width="500"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- figure out how to open accordions one at a time -->
