@@ -1,4 +1,7 @@
-<div class="accordion process-card accordion-flush container-xxl">
+<div
+  class="accordion process-card accordion-flush container-xxl"
+  *ngFor="let process of processes"
+>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button
@@ -14,9 +17,7 @@
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse">
-      <div class="accordion-body">
-        {{ process.description }}
-      </div>
+      <div class="accordion-body" [innerHTML]="process.description"></div>
       <div [ngSwitch]="process.name">
         <iframe
           *ngSwitchCase="'SR Latch Demo'"

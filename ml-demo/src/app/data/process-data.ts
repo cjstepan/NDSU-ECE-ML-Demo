@@ -1,10 +1,103 @@
 import {Process} from '../model/process';
 
 export const PROCESSES: Process[] = [
-    { id: 1, name: 'Introduction to Binary', description: 'Binary is a number system built on 0s and 1s, not 0-9 like decimal. Computers read binary instructions, also called machine code to figure out what they must do. Why not have computers use the decimal number system, since that is what we use? Since computers use components that are on or off (represented as 0 or 1), it is much easier and more efficient for computers to use the binary number system. Luckily, we do not have to program in machine code, since higher-level languages are compiled and executed on-site as machine code. How do we read binary? The same way we read decimal numbers! Instead of multiplying the position by 10 to the power of something, instead, multiply it by 2 to the power of something, like so: 1011 = 1 x 2^3 + 0 x 2^2 + 1 x 2^1 + 1 x 2^0 = 11.' },
-    { id: 2, name: 'Introduction to Logic Gates', description: 'What are logic gates? They are the fundamental building blocks of computers and electronic components everywhere in our lives! Our devices are made up of tens of thousands of these little switches. There are three main types of logic gates: AND, OR, and NOT. Every other gate and device can be made from these three gates. AND gates require that all inputs must match to give the proper output. OR gates will go high if ANY ONE input is high. NOT gates, also referred to as inverters, take the input signal and invert it as the output signal.' },
-    { id: 3, name: 'Logic Gates Demo', description: 'Explore the interactive demo below to learn how AND, OR and NOT gates work:' },
-    { id: 4, name: 'SR Latches and Memory', description: 'SR Latches, or Set-Reset Latches, are used to store values in memory. This is how your computer can remember things, like which tabs you have open and where you left off on that YouTube video. The value is stored when the set signal turns on, and reset when the reset signal turns on.' },
-    { id: 5, name: 'SR Latch Demo', description: 'Explore the interactive demo below to learn how the SR Latch works: This implementation uses 2 NOR gates (OR gates with NOT gates).' },
-    { id: 6, name: 'Importance of Components in Machine Learning', description: 'The CPU (Central Processing Unit) is the brains of your computer and of any machine learning model. The CPU can run small-scale machine learning models, but is not designed for creating things like ChatGPT due to resource constraints.     The GPU (Graphics Processing Unit) helps you run your favorite video games. Ok, well maybe it does more than that. Technically, it is responsible for all the math required to display your favorite games. In Machine Learning, the GPU does a bunch of math really fast when training a model to tell it how to behave. Since GPUs usually have more memory on-board, they can also run much faster than a CPU could when performing the same tasks.    Memory is very important when training a machine learning model. The more you have, the more efficiently you can train your model, and the more parameters your model can handle at once. Random access memory (RAM) is a cheap and efficient way to add extra memory to your system, and comes in sticks similar to this:    The rule of thumb with RAM when training a machine learning model is the more the merrier, where your only limit is your motherboard.' },
-]
+    {
+      id: 1,
+      name: "Understanding Binary: Why It Matters",
+      description: `
+        <h2>What is Binary?</h2>
+        <p>Binary is a number system that uses only two digits: 0 and 1. Unlike the decimal system, which uses digits from 0 to 9, binary is simpler and better suited for computers.</p>
+  
+        <h2>Why Binary for Computers?</h2>
+        <p>Computers work with electrical signals that are either on or off. In binary, "on" is represented by 1 and "off" by 0. This on-off pattern makes it easy for computers to process and store information using binary code.</p>
+  
+        <h2>Decimal vs. Binary</h2>
+        <p>In the decimal system, each digit's position represents a power of 10. For example, in the number 345:</p>
+        <ul>
+          <li>5 is in the 10<sup>0</sup> (units) place,</li>
+          <li>4 is in the 10<sup>1</sup> (tens) place,</li>
+          <li>3 is in the 10<sup>2</sup> (hundreds) place.</li>
+        </ul>
+        <p>In binary, each digit's position represents a power of 2. For example, in the binary number 1011:</p>
+        <ul>
+          <li>The rightmost digit (1) is in the 2<sup>0</sup> place,</li>
+          <li>The next digit (1) is in the 2<sup>1</sup> place,</li>
+          <li>The next digit (0) is in the 2<sup>2</sup> place,</li>
+          <li>The leftmost digit (1) is in the 2<sup>3</sup> place.</li>
+        </ul>
+  
+        <h2>How to Read Binary</h2>
+        <p>To convert binary numbers to decimal, you add up the values of the positions where there's a 1. Using the binary number 1011:</p>
+        <ul>
+          <li>1 x 2<sup>3</sup> = 8,</li>
+          <li>0 x 2<sup>2</sup> = 0,</li>
+          <li>1 x 2<sup>1</sup> = 2,</li>
+          <li>1 x 2<sup>0</sup> = 1.</li>
+        </ul>
+        <p>So, 1011 in binary is equal to 8 + 0 + 2 + 1 = 11 in decimal.</p>
+  
+        <h2>Why We Don't Program in Binary</h2>
+        <p>Programming directly in binary (called machine code) would be very complex and error-prone. Instead, we use higher-level programming languages like Python or Java. These languages are easier to use and are converted into binary by compilers or interpreters, allowing us to write code in a more understandable way.</p>
+      `
+    },
+    {
+        id: 2,
+        name: "Introduction to Logic Gates",
+        description: `
+          <h2>What are Logic Gates?</h2>
+          <p>Logic gates are the fundamental building blocks of computers and electronic components. They are the switches that control how information flows in a circuit. There are three main types of logic gates:</p>
+          <ul>
+            <li>AND gate: Outputs 1 only if both inputs are 1,</li>
+            <li>OR gate: Outputs 1 if any input is 1,</li>
+            <li>NOT gate: Inverts the input signal.</li>
+          </ul>
+          <p>Every other gate and device in a computer can be made from these three basic gates.</p>
+        `
+    },
+    {
+        id: 3,
+        name: "Logic Gates Demo",
+        description: `
+          <h2>Explore the Interactive Demo</h2>
+          <p>Use the interactive demo below to learn how AND, OR, and NOT gates work. Click on the inputs to see how the gates respond and produce the output.</p>
+        `
+    },
+    {
+        id: 4,
+        name: "SR Latches and Memory",
+        description: `
+          <h2>What are SR Latches?</h2>
+          <p>SR latches, or Set-Reset latches, are simple memory units used to store values in circuits. They have two inputs:</p>
+          <ul>
+            <li>Set (S): Sets the output to 1,</li>
+            <li>Reset (R): Resets the output to 0.</li>
+          </ul>
+          <p>SR latches are the building blocks of more complex memory units like flip-flops and registers.</p>
+        `
+    },
+    {
+        id: 5,
+        name: "SR Latch Demo",
+        description: `
+          <h2>Explore the Interactive Demo</h2>
+          <p>Use the interactive demo below to learn how SR latches work. Set and reset the inputs to see how the latch stores values in memory.</p>
+        `
+    },
+    {
+        id: 6,
+        name: "Importance of Components in Machine Learning",
+        description: `
+          <h2>Key Components for Machine Learning</h2>
+          <p>Machine learning models require powerful hardware components to run efficiently. Here are some key components:</p>
+          <ul>
+            <li>CPU (Central Processing Unit): The brain of the computer, responsible for general computing tasks.</li>
+            <li>GPU (Graphics Processing Unit): Specialized for rendering graphics and performing complex mathematical computations.</li>
+            <li>Memory (RAM): Stores data and instructions for the CPU and GPU to access quickly.</li>
+          </ul>
+          <h2>Why Components Matter</h2>
+          <p>The CPU can run small-scale machine learning models, but GPUs are essential for training large models like neural networks. GPUs can perform parallel computations faster than CPUs, making them ideal for machine learning tasks.</p>
+          <p>Memory is crucial for storing and accessing data during model training. More memory allows for faster processing and larger model sizes, leading to better performance.</p>
+        `
+    }
+  ];
+  
