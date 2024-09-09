@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <div
+      class="accordion process-card accordion-flush container-xxl"
+      id="accordionFlush"
+    >
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="false"
+            aria-controls="collapseOne"
+            id="name"
+          >
+            Understanding Binary: Why It Matters
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>What is Binary?</h2>
+            <p>
+              Binary is a number system that uses only two digits: 0 and 1.
+              Unlike the decimal system, which uses digits from 0 to 9, binary
+              is simpler and better suited for computers.
+            </p>
+
+            <h2>Why Binary for Computers?</h2>
+            <p>
+              Computers work with electrical signals that are "on" (1) or "off"
+              (0). This on-off pattern makes it easy for computers to process
+              and store information.
+            </p>
+
+            <h2>Decimal vs. Binary</h2>
+            <p>
+              In the decimal system, each digit's position represents a power of
+              10. For example, in the number 572:
+            </p>
+            <ul>
+              <li>5 is in the 10<sup>2</sup> (hundreds) place.</li>
+              <li>7 is in the 10<sup>1</sup> (tens) place,</li>
+              <li>2 is in the 10<sup>0</sup> (units/ones) place,</li>
+            </ul>
+            <p>
+              In binary, each digit's position represents a power of 2. For
+              example, in the binary number 1011:
+            </p>
+            <ul>
+              <li>The rightmost digit (1) is in the 2<sup>0</sup> place,</li>
+              <li>The next digit (1) is in the 2<sup>1</sup> place,</li>
+              <li>The next digit (0) is in the 2<sup>2</sup> place,</li>
+              <li>The leftmost digit (1) is in the 2<sup>3</sup> place.</li>
+            </ul>
+
+            <h2>How to Read Binary</h2>
+            <p>
+              To convert binary numbers to decimal, you add up the values of the
+              positions where there's a 1. Using the binary number 1011:
+            </p>
+            <ul>
+              <li>1 x 2<sup>3</sup> = 8,</li>
+              <li>0 x 2<sup>2</sup> = 0,</li>
+              <li>1 x 2<sup>1</sup> = 2,</li>
+              <li>1 x 2<sup>0</sup> = 1.</li>
+            </ul>
+            <p>So, 1011 in binary is equal to 8 + 0 + 2 + 1 = 11 in decimal.</p>
+
+            <h2>Why We Don't Program in Binary</h2>
+            <p>
+              Programming directly in binary (called machine code) would be very
+              complex and error-prone. Instead, we use higher-level programming
+              languages like Python or Java. These languages are easier to use
+              and are converted into binary by compilers or interpreters,
+              allowing us to write code in a more understandable way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+            id="name"
+          >
+            Introduction to Logic Gates
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>What are Logic Gates?</h2>
+            <p>
+              Logic gates are the fundamental building blocks of computers and
+              electronic components. They are the switches that control how
+              information flows in a circuit. There are three main types of
+              logic gates:
+            </p>
+            <ul>
+              <li>AND gate: Outputs 1 only if both inputs are 1,</li>
+              <li>OR gate: Outputs 1 if any input is 1,</li>
+              <li>NOT gate: Inverts the input signal.</li>
+            </ul>
+            <p>
+              Every other gate and device in a computer can be made from these
+              three basic gates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="true"
+            aria-controls="collapseThree"
+            id="name"
+          >
+            Logic Gates Demo
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>Explore the Interactive Demo</h2>
+            <p>
+              Use the interactive demo below to learn how AND, OR, and NOT gates
+              work. Click on the inputs to see how the gates respond and produce
+              the output.
+            </p>
+            <iframe
+              src="https://circuitverse.org/simulator/embed/logic-gates-demo-c8ea593c-7a74-4730-a932-e02e544ef58e?theme=night-sky&display_title=true&clock_time=false&fullscreen=false&zoom_in_out=false"
+              style="
+                border-width: 2px;
+                border-style: solid;
+                border-color: #000000;
+              "
+              name="myiframe"
+              id="projectPreview"
+              scrolling="no"
+              frameborder="1"
+              marginheight="0px"
+              marginwidth="0px"
+              height="500"
+              width="500"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+            id="name"
+          >
+            SR Latches and Memory
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>What are SR Latches?</h2>
+            <p>
+              SR latches, or Set-Reset latches, are simple memory units used to
+              store values in circuits. They have two inputs:
+            </p>
+            <ul>
+              <li>Set (S): Sets the output to 1,</li>
+              <li>Reset (R): Resets the output to 0.</li>
+            </ul>
+            <p>
+              SR latches are the building blocks of more complex memory units
+              like RAM (Random Access Memory) and registers in computers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="true"
+            aria-controls="collapseFive"
+            id="name"
+          >
+            SR Latch Demo
+          </button>
+        </h2>
+        <div
+          id="collapseFive"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>Explore the Interactive Demo</h2>
+            <p>
+              Use the interactive demo below to learn how SR latches work.
+              Toggle the set and reset signals to see how the latch stores
+              values in memory with the set value.
+            </p>
+            <iframe
+              src="https://circuitverse.org/simulator/embed/sr-latch-demo?theme=night-sky&display_title=true&clock_time=false&fullscreen=false&zoom_in_out=false"
+              style="border-width: 2px; border-style: solid; border-color: 0000"
+              name="myiframe"
+              id="sr-latch-demo"
+              scrolling="no"
+              frameborder="1"
+              marginheight="0px"
+              marginwidth="0px"
+              height="500"
+              width="500"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSix"
+            aria-expanded="false"
+            aria-controls="collapseSix"
+            id="name"
+          >
+            Importance of Components in Machine Learning
+          </button>
+        </h2>
+        <div
+          id="collapseSix"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlush"
+        >
+          <div class="accordion-body">
+            <h2>Key Components for Machine Learning</h2>
+            <p>
+              Machine learning models require powerful hardware components to
+              run efficiently. Here are some key components:
+            </p>
+            <ul>
+              <li>
+                CPU (Central Processing Unit): The brain of the computer,
+                responsible for general computing tasks.
+              </li>
+              <li>
+                GPU (Graphics Processing Unit): Specialized chip for rendering
+                graphics and performing complex mathematical computations.
+              </li>
+              <li>
+                Memory (RAM): Stores data and instructions for the CPU and GPU
+                to access quickly.
+              </li>
+            </ul>
+            <h2>Why Components Matter</h2>
+            <p>
+              The CPU can run small-scale machine learning models by itself, but
+              GPUs are essential for training large models like neural networks.
+              GPUs can perform parallel computations (do many things at once)
+              faster and more efficient than CPUs, making them ideal for machine
+              learning tasks.
+            </p>
+            <p>
+              Memory is crucial for storing and accessing data during model
+              training. More memory allows for faster processing and larger
+              model sizes, leading to better performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    .process-card {
+      padding: 0 0;
+      max-width: 750px;
+      background-color: #005643;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+
+    #name {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background-color: #005643;
+    }
+
+    .accordion-item {
+      font-size: 16px;
+      padding: 10px 0 0 0;
+    }
+  </style>
+</html>
