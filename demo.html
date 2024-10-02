@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <script
@@ -17,11 +18,12 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/sleep-screen.js"></script>
+    <div class="sleep-screen" id="sleepScreen"></div>
+      Click or touch to continue...
+    </div>
 
-    <div
-      class="accordion process-card accordion-flush container-xxl"
-      id="accordionFlush"
-    >
+    <div class="accordion accordion-flush container-xxl" id="accordionFlush">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
@@ -109,7 +111,7 @@
               code.
             </p>
             <img
-              src="./morse-code-alphabet.png"
+              src="./img/morse-code-alphabet.png"
               alt="Picture of the Morse Code Alphabet"
               style="width: 500; height: 500px"
             />
@@ -331,28 +333,4 @@
       </div>
     </div>
   </body>
-  <style>
-    .process-card {
-      padding: 0 0;
-      max-width: 750px;
-      background-color: #005643;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-    }
-
-    #name {
-      font-size: 20px;
-      font-weight: bold;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-      color: #fff;
-      text-align: center;
-      background-color: #005643;
-    }
-
-    .accordion-item {
-      font-size: 16px;
-      padding: 10px 0 0 0;
-    }
-  </style>
 </html>
