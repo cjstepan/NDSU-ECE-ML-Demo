@@ -1,58 +1,63 @@
 let inactivityTimer;
+const sleepScreenPeriod = 60 * 1000 * 3;
+const typingPeriod = 60 * 1000;
+
+// Typing animation variables
+let index = 0;
+const text = "What do you know about computers? Tap to find out . . .";
+const typingSpeed = 100; // Typing speed in milliseconds
 
 const sleepScreen = document.getElementById("sleepScreen");
 
+// Event listeners for both touch and mouse interactions
+document.addEventListener("click", resetTimer);
+document.addEventListener("touchstart", resetTimer);
+// document.addEventListener("scroll", resetTimer);
+
+// Ensure the screen shows after 1 minute of inactivity
 function showSleepScreen() {
   sleepScreen.style.display = "flex"; // Show the sleep screen
-  sleepScreen.classList.remove("hide"); // Remove the hide class to reset position
+  sleepScreen.classList.remove("hide"); // Reset the position
 }
 
 function hideSleepScreen() {
-  sleepScreen.classList.add("hide"); // Add the hide class to slide up
+  sleepScreen.classList.add("hide"); // Add class for sliding up
   setTimeout(() => {
-    sleepScreen.style.display = "none"; // Hide the element after the animation
-  }, 500); // Match this duration to the transition duration in CSS
+    sleepScreen.style.display = "none"; // Fully hide after the animation
+  }, 500); // Match the CSS transition duration
 }
 
 function resetTimer() {
-  clearTimeout(inactivityTimer);
-  hideSleepScreen(); // Hide the sleep screen on activity
-  inactivityTimer = setTimeout(showSleepScreen, 60 * 1000); // 1 minute
+  clearTimeout(inactivityTimer); // Clear any existing timers
+  hideSleepScreen(); // Hide the sleep screen if it's visible
+
+  // Start a new timer that shows the sleep screen after 1 minute
+  inactivityTimer = setTimeout(showSleepScreen, sleepScreenPeriod); 
 }
 
-// Initial timer setup
-inactivityTimer = setTimeout(showSleepScreen, 60 * 1000); // Show after 1 minute
-document.addEventListener("click", resetTimer);
-document.addEventListener("touchstart", resetTimer);
-
-let index = 0;
-const text = "What do you know about computers? Tap to find out . . .";
-const typingSpeed = 100; // Adjust typing speed here (in milliseconds)
-
 function type() {
-  const sleepScreen = document.getElementById("sleepScreen");
   const p = sleepScreen.querySelector(".typing");
   if (index < text.length) {
     p.textContent += text.charAt(index);
     index++;
     setTimeout(type, typingSpeed);
   } else {
-    // Reset typing animation every minute
-    setTimeout(resetTypingAnimation, 60 * 1000);
+    setTimeout(resetTypingAnimation, typingPeriod); // Reset animation after 1 minute
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const sleepScreen = document.getElementById("sleepScreen");
+// Setup typing animation once DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
   const p = document.createElement("p");
   p.classList.add("typing");
   sleepScreen.appendChild(p);
   type();
 });
 
+// Reset and restart the typing animation
 function resetTypingAnimation() {
   const p = sleepScreen.querySelector(".typing");
-  p.textContent = ""; // Clear the text content
+  p.textContent = ""; // Clear text content
   index = 0; // Reset the index
   type(); // Restart the typing animation
 }

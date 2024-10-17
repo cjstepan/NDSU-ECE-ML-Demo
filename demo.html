@@ -76,16 +76,16 @@
             <p>
               Watch this video to see how binary counting works
               <br />
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/v83Uvg_ySK8?si=N42PY22BrA-S0GZA&amp;start=6"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+              <video
+                src="./vid/binary-counter.mp4"
+                alt="Binary Counter Video"
+                style="width: 100%; height: auto"
+                autoplay
+                loop
+                muted
+                playsinline
+                type="video/mp4"
+              ></video>
             </p>
 
             <h2>Why We Don't Program in Binary</h2>
@@ -111,13 +111,14 @@
             <img
               src="./img/morse-code-alphabet.png"
               alt="Picture of the Morse Code Alphabet"
-              style="width: 500; height: 500px"
+              style="width: 500px; height: 500"
             />
             <iframe
               src="https://moutend.github.io/RxMorse/"
               frameborder="0"
               width="100%"
-              height="500"
+              height="400"
+              scrolling="no"
             ></iframe>
           </div>
         </div>
@@ -162,7 +163,7 @@
               the door to open.
             </p>
             <video
-              src="./img/and-gate-demo.mp4"
+              src="./vid/and-gate-demo.mp4"
               alt="AND Gate Demo"
               style="width: 100%; height: auto"
               autoplay
@@ -184,15 +185,13 @@
                 border-style: solid;
                 border-color: #000000;
               "
-              name="myiframe"
-              id="projectPreview"
+              id="and-gate-demo"
               scrolling="no"
               frameborder="1"
               marginheight="0px"
               marginwidth="0px"
               height="500"
               width="500"
-              allowfullscreen
             ></iframe>
           </div>
         </div>
@@ -238,7 +237,7 @@
               if you leave the game and come back later.
             </p>
             <video
-              src="./img/latch-demo.mp4"
+              src="./vid/latch-demo.mp4"
               alt="Minecraft Chest Latch Demo"
               width="100%"
               height="auto"
@@ -257,7 +256,6 @@
             <iframe
               src="https://circuitverse.org/simulator/embed/sr-latch-demo?theme=night-sky&display_title=true&clock_time=false&fullscreen=false&zoom_in_out=false"
               style="border-width: 2px; border-style: solid; border-color: 0000"
-              name="myiframe"
               id="sr-latch-demo"
               scrolling="no"
               frameborder="1"
@@ -265,7 +263,6 @@
               marginwidth="0px"
               height="500"
               width="500"
-              allowfullscreen
             ></iframe>
           </div>
         </div>
@@ -296,7 +293,7 @@
               identifying different objects and sounds:
             </p>
             <video
-              src="./img/prediction.mp4"
+              src="./vid/prediction.mp4"
               autoplay
               loop
               muted
@@ -309,33 +306,30 @@
               Watch these videos to get started training your own Machine
               Learning Model, Then click the button below to start training!
               <br />
-              <button
+              <a
                 class="btn btn-outline-success"
-                onclick="window.location.href='https://teachablemachine.withgoogle.com/train'"
+                href="https://teachablemachine.withgoogle.com/train"
+                target="_blank"
               >
                 Train Your Model!
-              </button>
+              </a>
             </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/DFBbSTvtpy4?si=cuTcljTxl8ZMM1Dc"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/CO67EQ0ZWgA?si=_K2oANEGRVhVdR3p"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <video
+              src="./vid/teachable-machine-gather.webm"
+              type="video/webm"
+              controls
+              poster="./img/gather.png"
+              width="40%"
+              height="auto"
+            ></video>
+            <video
+              src="./vid/teachable-machine-train.webm"
+              type="video/webm"
+              controls
+              poster="./img/train.png"
+              width="40%"
+              height="auto"
+            ></video>
           </div>
         </div>
       </div>

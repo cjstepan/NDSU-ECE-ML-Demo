@@ -54,18 +54,17 @@
             <p>
               Watch this video to see how:
               <br />
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/v83Uvg_ySK8?si=N42PY22BrA-S0GZA&amp;start=6"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
             </p>
-
+            <video
+              src="./vid/binary-counter.mp4"
+              alt="Binary Counter Video"
+              style="width: 100%; height: auto"
+              autoplay
+              loop
+              muted
+              playsinline
+              type="video/mp4"
+            ></video>
             <h2>Write a Secret Message in Binary</h2>
             <p>
               Morse code is a way to send secret messages using dots and dashes.
@@ -83,7 +82,8 @@
               src="https://moutend.github.io/RxMorse/"
               frameborder="0"
               width="100%"
-              height="500"
+              height="400"
+              scrolling="no"
             ></iframe>
           </div>
         </div>
@@ -120,7 +120,7 @@
               the door to open so we can get to our diamonds!
             </p>
             <video
-              src="./img/and-gate-demo.mp4"
+              src="./vid/and-gate-demo.mp4"
               alt="AND Gate Demo"
               style="width: 100%; height: auto"
               autoplay
@@ -162,7 +162,7 @@
               if you leave the game and come back later.
             </p>
             <video
-              src="./img/latch-demo.mp4"
+              src="./vid/latch-demo.mp4"
               alt="Minecraft Chest Latch Demo"
               width="100%"
               height="auto"
@@ -201,7 +201,7 @@
               learning to identify different objects and sounds:
             </p>
             <video
-              src="./img/prediction.mp4"
+              src="./vid/prediction.mp4"
               autoplay
               loop
               muted
@@ -214,60 +214,33 @@
               Watch these videos to get started training your own Machine
               Learning Model, Then click the button below to start training!
               <br />
-              <button
+              <a
                 class="btn btn-outline-success"
-                onclick="window.location.href='https://teachablemachine.withgoogle.com/train'"
+                href="https://teachablemachine.withgoogle.com/train"
+                target="_blank"
               >
                 Train Your Model!
-              </button>
+              </a>
             </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/DFBbSTvtpy4?si=cuTcljTxl8ZMM1Dc"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/CO67EQ0ZWgA?si=_K2oANEGRVhVdR3p"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <video
+              src="./vid/teachable-machine-gather.webm"
+              type="video/webm"
+              controls
+              poster="./img/gather.png"
+              width="40%"
+              height="auto"
+            ></video>
+            <video
+              src="./vid/teachable-machine-train.webm"
+              type="video/webm"
+              controls
+              poster="./img/train.png"
+              width="40%"
+              height="auto"
+            ></video>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <style>
-    .process-card {
-      padding: 0 0;
-      max-width: 750px;
-      background-color: #005643;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-    }
-
-    #name {
-      font-size: 20px;
-      font-weight: bold;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-      color: #fff;
-      text-align: center;
-      background-color: #005643;
-    }
-
-    .accordion-item {
-      font-size: 16px;
-      padding: 10px 0 0 0;
-    }
-  </style>
 </html>
