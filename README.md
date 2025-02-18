@@ -1,9 +1,9 @@
-*Updated 10/16/2024*
+*Updated 2/18/2025*
 # About
 This project aims to teach students of varying ages about the basics of computers and Artificial intelligence.
 
 ## Structure
-There are 2 separate websites as part of this project. `demo.html` is the website that is part of the installations in Offerdahl West and the Quentin Burdick Building. `demo-elementary.html` has the same content as `demo.html`, but is geared towards a younger audience, namely, elementary and middle school students, whereas `demo.html` is for prospective and current students.
+There are 2 separate websites as part of this project. `index.html` is the website that is part of the installations in Offerdahl West and the Quentin Burdick Building. `demo-elementary.html` has the same content as `index.html`, but is geared towards a younger audience, namely, elementary and middle school students, whereas `index.html` is for prospective and current students.
 
 ## Content
 Both websites are built on HTML5 and Bootstrap 5.3. The general layout includes pre-expanded accordion items to separate content with a sleep screen that activates on page load and after a 3 minute inactivity timeout.
@@ -26,4 +26,5 @@ https://github.com/user-attachments/assets/8e9c0cc5-4b55-461b-8ade-b7080723f2b6
 
 The animation portion lives in `sleep-screen.js`. The eventListeners for "click" and "touchstart" ensure the screen goes away once touched or clicked. This starts the timeout function, where it will wait for 3 minutes of inactivity before re-appearing.
 
-
+## Try it out
+Visit [The Demo Page](https://cjstepan.github.io/NDSU-ECE-ML-Demo/) to try it out for yourself!
